@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sysctl net.ipv4.ip_forward=1
 for redirection in $@; do
     src_port=$(echo ${redirection} | cut -d':' -f1)
     dst_ip=$(echo ${redirection} | cut -d':' -f2)
